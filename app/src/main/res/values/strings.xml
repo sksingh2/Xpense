@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Xpense</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="get_otp">Get Otp</string>
+    <string name="login">LogIn</string>
+    <string name="otp">OTP</string>
+    <string name="signup">SignUP</string>
+    <string name="login_text">LogIn</string>
 </resources>
