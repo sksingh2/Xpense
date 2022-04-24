@@ -22,11 +22,13 @@
             android:id="@+id/otp_log"
             android:layout_width="96dp"
             android:layout_height="50dp"
-            android:layout_marginTop="17dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
             android:text="@string/get_otp"
             android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.76"
+            app:layout_constraintHorizontal_bias="0.767"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
@@ -41,28 +43,34 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.507"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otp_log"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/sign_up_log"
             android:layout_width="96dp"
             android:layout_height="50dp"
+            android:layout_marginTop="50dp"
             android:layout_marginBottom="360dp"
             android:text="@string/login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.489"
-            app:layout_constraintStart_toEndOf="@+id/button2" />
+            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="96dp"
             android:layout_height="50dp"
             android:layout_marginStart="60dp"
+            android:layout_marginTop="50dp"
             android:layout_marginBottom="360dp"
             android:text="@string/signup"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
         <TextView
             android:id="@+id/login_text"
