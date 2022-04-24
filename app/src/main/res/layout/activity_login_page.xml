@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LOGIN_PAGE">
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="251dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_text" />
+
+        <Button
+            android:id="@+id/otp_log"
+            android:layout_width="96dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="17dp"
+            android:text="@string/get_otp"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.76"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="253dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="460dp"
+            android:ems="10"
+            android:hint="@string/otp"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/sign_up_log"
+            android:layout_width="96dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="360dp"
+            android:text="@string/login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toEndOf="@+id/button2" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="96dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="360dp"
+            android:text="@string/signup"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="290dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="80dp"
+            android:padding="4sp"
+            android:paddingLeft="2sp"
+            android:paddingTop="2sp"
+            android:paddingEnd="2sp"
+            android:paddingRight="2sp"
+            android:paddingBottom="2sp"
+            android:text="@string/login_text"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
