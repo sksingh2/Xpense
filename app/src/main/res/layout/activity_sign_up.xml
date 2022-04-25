@@ -7,7 +7,7 @@
     tools:context=".Sign_Up">
 
         <EditText
-            android:id="@+id/editTextPhone"
+            android:id="@+id/phone_no"
             android:layout_width="251dp"
             android:layout_height="57dp"
             android:layout_marginTop="24dp"
@@ -20,21 +20,21 @@
             app:layout_constraintTop_toBottomOf="@+id/login_text" />
 
         <Button
-            android:id="@+id/otp_log"
+            android:id="@+id/get_otp"
             android:layout_width="96dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="15dp"
             android:text="@string/get_otp"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/otp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.767"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+            app:layout_constraintTop_toBottomOf="@+id/phone_no" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/otp"
             android:layout_width="253dp"
             android:layout_height="49dp"
             android:ems="10"
@@ -56,15 +56,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.573"
-            app:layout_constraintStart_toEndOf="@+id/button2" />
+            app:layout_constraintStart_toEndOf="@+id/new_user" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/new_user"
             android:layout_width="96dp"
             android:layout_height="50dp"
             android:layout_marginStart="76dp"
             android:layout_marginBottom="316dp"
-            android:text="@string/newuser"
+            android:text="@string/new_user"
             android:textSize="12sp"
             app:iconPadding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
