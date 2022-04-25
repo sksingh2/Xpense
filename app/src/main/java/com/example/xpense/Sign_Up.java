@@ -3,6 +3,7 @@ package com.example.xpense;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,17 +30,19 @@ public class Sign_Up extends AppCompatActivity {
                 phone = phone_no.getText().toString();
                 if (phone.length() != 10)
                 {
-                   /* SHORT HAND SYNTAX
-                   Toast invalid_no = Toast.makeText(getApplicationContext(), "Invalid Number",
-                            Toast.LENGTH_SHORT);
-
-                    toast.show();**/
+                   Toast invalid_no = Toast.makeText(getApplicationContext(), "Invalid Number",Toast.LENGTH_SHORT);
+                         invalid_no.show();
+                   /* LONG SYNTAX FOR TOAST
                     Context context = getApplicationContext();
                     CharSequence text = "Invalid Number";
                     int duration = Toast.LENGTH_SHORT;
-
                     Toast invalid_number = Toast.makeText(context, text, duration);
-                    invalid_number.show();
+                    invalid_number.show();**/
+                }
+                else
+                {
+                    Toast otp_send = Toast.makeText(getApplicationContext(),"Otp send",Toast.LENGTH_SHORT);
+                    otp_send.show();
                 }
 
             } });
@@ -47,10 +50,11 @@ public class Sign_Up extends AppCompatActivity {
         sign_up.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 //temp_otp="1234";
-                //
                 otp = Integer.parseInt(in_otp.getText().toString());
                 if (otp == temp_otp)
                 {
+                    Intent verified = new Intent(Sign_Up.this,HomeFragment.class );
+                    startActivity(verified);
                 }
                 else
                 {
@@ -61,17 +65,15 @@ public class Sign_Up extends AppCompatActivity {
 
             }
         });
+        new_user.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v){
+                Intent redirect_home = new Intent(Sign_Up.this,SigninPage.class );
+                startActivity(redirect_home);
+            }
+        });
         }
     }
-  /*  phone = phone_no.getText().toString();
-
-    new_user.setOnClickListener(new View.OnClickListener()
-    {
-        public void onClick(View v){
-
-    }
-    });
-    **/
 
 
 
