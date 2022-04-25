@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Explain it to owais and akash about this front end
  * A simple {@link Fragment} subclass.
  * Use the {@link ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.

@@ -3,16 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_sign_up.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_signin_page.xml" value="0.136" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_groups.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_home.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/menu/item_menu.xml" value="0.25" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_friend.xml" value="0.2665" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_group.xml" value="0.2665" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_home.xml" value="0.2665" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_profile.xml" value="0.2665" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/drawable/item_selector.xml" value="0.2665" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/drawable/round_corner.xml" value="0.2665" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_login_page.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_main.xml" value="0.2864583333333333" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_login_page.xml" value="0.264" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_signin_page.xml" value="0.27447916666666666" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_signin_verify_otpprototype.xml" value="0.1265625" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/menu/item_menu.xml" value="0.264" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_friend.xml" value="0.2604166666666667" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_groups.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_home.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/menu/item_menu.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
