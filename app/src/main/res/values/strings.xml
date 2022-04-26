@@ -2,9 +2,10 @@
     <string name="app_name">Xpense</string>
     <string name="phone_number">Phone Number</string>
     <string name="get_otp">Get Otp</string>
-    <string name="signup">SignUp</string>
+    <string name="login">LogIn</string>
     <string name="otp">OTP</string>
     <string name="new_user">New User ?</string>
+    <string name="signup">SignUp</string>
     <string name="login_text">LogIn</string>
 
     <string name="home">Home</string>
