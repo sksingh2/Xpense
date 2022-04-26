@@ -13,7 +13,7 @@ public class SigninPage extends AppCompatActivity {
     TextView AppName;
     EditText username,phoneNumber,otpPassword;
     Button verifyOtp,Signin,sendOtp;
-    String un,phone,valid,validFirst;
+    String un,phone,validSecond,validFirst;
     int temp_otp = 1234, otp;
 
     @Override
@@ -50,8 +50,8 @@ public class SigninPage extends AppCompatActivity {
              otp = Integer.parseInt(otpPassword.getText().toString());
              if (otp == temp_otp)
              {
-                 valid = "OTP Verified";
-                 Toast valid_otp = Toast.makeText(this, valid, Toast.LENGTH_SHORT);
+                 validSecond = "OTP Verified";
+                 Toast valid_otp = Toast.makeText(this, validSecond, Toast.LENGTH_SHORT);
                  valid_otp.show();
 
              }
@@ -64,7 +64,7 @@ public class SigninPage extends AppCompatActivity {
          });
 
          Signin.setOnClickListener(v -> {
-             if (valid == "OTP Verified")
+             if (validSecond == "OTP Verified")
              {
                  //Username and phone number should be stored after clicking this button
                  Intent redirect_home = new Intent(SigninPage.this,Sign_Up.class );
