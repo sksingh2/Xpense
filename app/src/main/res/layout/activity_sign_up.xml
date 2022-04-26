@@ -51,24 +51,28 @@
             android:id="@+id/sign_up_log"
             android:layout_width="96dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="316dp"
-            android:text="@string/signup"
+            android:layout_marginStart="159dp"
+            android:layout_marginEnd="156dp"
+            android:layout_marginBottom="304dp"
+            android:text="@string/login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.573"
-            app:layout_constraintStart_toEndOf="@+id/new_user" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/new_user"
-            android:layout_width="96dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="76dp"
-            android:layout_marginBottom="316dp"
-            android:text="@string/new_user"
-            android:textSize="12sp"
+            android:layout_width="82dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="94dp"
+            android:layout_marginBottom="217dp"
+            android:text="@string/sign_up"
+            android:textSize="10sp"
             app:iconPadding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView" />
 
         <TextView
             android:id="@+id/login_text"
@@ -90,4 +94,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="216dp"
+            android:padding="8dp"
+            android:text="@string/text"
+            android:textAlignment="viewEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/new_user"
+            app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
