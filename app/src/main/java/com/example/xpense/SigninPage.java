@@ -1,20 +1,66 @@
 package com.example.xpense;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class SigninPage extends AppCompatActivity {
-    TextView t1;
+    TextView AppName;
+    EditText username,phoneNumber,otpPassword;
+    Button verifyOtp,Signin,sendOtp;
+    String un,phone;
+    int temp_otp = 1234, otp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin_page);
-         t1 = findViewById(R.id.app_name);
-         t1.setText("Hello");
+         AppName = findViewById(R.id.signIn);
+         username = findViewById(R.id.EnterUsername);
+         phoneNumber = findViewById(R.id.EnterPhoneNumber);
+         otpPassword = findViewById(R.id.OtpPassword);
+         verifyOtp = findViewById(R.id.VerifyOTP);
+         Signin = findViewById(R.id.buttonSignUp);
+         sendOtp = findViewById(R.id.sendOTP);
+
+         sendOtp.setOnClickListener(v -> {
+             un = username.getText().toString();
+             phone = phoneNumber.getText().toString();
+             if (un.length() <= 20 && phone.length() != 10) {
+                 Toast.makeText(SigninPage.this, "Username can't be more than 20 letters and Phone Number is invalid", Toast.LENGTH_SHORT).show();
+             } else if(phone.length() != 10){
+                 Toast.makeText(SigninPage.this, "Phone Number is invalid", Toast.LENGTH_SHORT).show();
+             }else if(un.length() <= 20){
+                 Toast.makeText(SigninPage.this, "Username can't be more than 20 letters", Toast.LENGTH_SHORT).show();
+             }else{
+                 Toast.makeText(SigninPage.this, "Username and Phone Number is valid", Toast.LENGTH_SHORT).show();
+             }
+         });
+
+         verifyOtp.setOnClickListener(v -> {
+             //temp_otp="1234";
+             otp = Integer.parseInt(otpPassword.getText().toString());
+             if (otp == temp_otp)
+             {
+                 Intent verified = new Intent(SigninPage.this,HomeFragment.class );
+                 startActivity(verified);
+             }
+             else
+             {
+                 Toast invalid_otp = Toast.makeText(getApplication(), "Invalid Otp", Toast.LENGTH_SHORT);
+                 invalid_otp.show();
+             }
+         });
+
+         Signin.setOnClickListener(v -> {
+             Intent redirect_home = new Intent(SigninPage.this,Sign_Up.class );
+             startActivity(redirect_home);
+         });
 
         Toast.makeText(this, "This is the signin page", Toast.LENGTH_SHORT).show();
     }
