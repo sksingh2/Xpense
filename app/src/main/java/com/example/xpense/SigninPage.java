@@ -13,7 +13,7 @@ public class SigninPage extends AppCompatActivity {
     TextView AppName;
     EditText username,phoneNumber,otpPassword;
     Button verifyOtp,Signin,sendOtp;
-    String un,phone;
+    String un,phone,valid,validFirst;
     int temp_otp = 1234, otp;
 
     @Override
@@ -31,37 +31,51 @@ public class SigninPage extends AppCompatActivity {
          sendOtp.setOnClickListener(v -> {
              un = username.getText().toString();
              phone = phoneNumber.getText().toString();
-             if (un.length() <= 20 && phone.length() != 10) {
+             if (un.length() >= 20 && phone.length() != 10) {
                  Toast.makeText(SigninPage.this, "Username can't be more than 20 letters and Phone Number is invalid", Toast.LENGTH_SHORT).show();
              } else if(phone.length() != 10){
                  Toast.makeText(SigninPage.this, "Phone Number is invalid", Toast.LENGTH_SHORT).show();
-             }else if(un.length() <= 20){
+             }else if(un.length() >= 20){
                  Toast.makeText(SigninPage.this, "Username can't be more than 20 letters", Toast.LENGTH_SHORT).show();
              }else{
-                 Toast.makeText(SigninPage.this, "Username and Phone Number is valid", Toast.LENGTH_SHORT).show();
+                 validFirst = "Username and Phone Number is valid";
+                 Toast.makeText(SigninPage.this, validFirst, Toast.LENGTH_SHORT).show();
              }
          });
 
          verifyOtp.setOnClickListener(v -> {
+             if (validFirst == "Username and Phone Number is valid")
+             {
              //temp_otp="1234";
              otp = Integer.parseInt(otpPassword.getText().toString());
              if (otp == temp_otp)
              {
-                 Intent verified = new Intent(SigninPage.this,HomeFragment.class );
-                 startActivity(verified);
+                 valid = "OTP Verified";
+                 Toast valid_otp = Toast.makeText(this, valid, Toast.LENGTH_SHORT);
+                 valid_otp.show();
+
              }
              else
              {
                  Toast invalid_otp = Toast.makeText(getApplication(), "Invalid Otp", Toast.LENGTH_SHORT);
                  invalid_otp.show();
              }
+             }
          });
 
          Signin.setOnClickListener(v -> {
-             Intent redirect_home = new Intent(SigninPage.this,Sign_Up.class );
-             startActivity(redirect_home);
+             if (valid == "OTP Verified")
+             {
+                 //Username and phone number should be stored after clicking this button
+                 Intent redirect_home = new Intent(SigninPage.this,Sign_Up.class );
+                 startActivity(redirect_home);
+             }
+             else
+             {
+                 Toast.makeText(this, "OTP not Verified or Wrong Otp", Toast.LENGTH_SHORT).show();
+             }
+
          });
 
-        Toast.makeText(this, "This is the signin page", Toast.LENGTH_SHORT).show();
     }
 }
