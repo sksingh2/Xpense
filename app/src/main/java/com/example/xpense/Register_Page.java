@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SigninPage extends AppCompatActivity {
+public class Register_Page extends AppCompatActivity {
     TextView AppName;
     EditText username,phoneNumber,otpPassword;
     Button verifyOtp,Signin,sendOtp;
@@ -20,7 +20,7 @@ public class SigninPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signin_page);
+        setContentView(R.layout.activity_register_page);
          AppName = findViewById(R.id.signIn);
          username = findViewById(R.id.EnterUsername);
          phoneNumber = findViewById(R.id.EnterPhoneNumber);
@@ -34,14 +34,14 @@ public class SigninPage extends AppCompatActivity {
              temp = phoneNumber.getText().toString();
 
              if (un.length() >= 20 && temp.length() != 10) {
-                 Toast.makeText(SigninPage.this, "Username can't be more than 20 letters and Phone Number is invalid", Toast.LENGTH_SHORT).show();
+                 Toast.makeText(Register_Page.this, "Username can't be more than 20 letters and Phone Number is invalid", Toast.LENGTH_SHORT).show();
              } else if(temp.length() != 10){
-                 Toast.makeText(SigninPage.this, "Phone Number is invalid", Toast.LENGTH_SHORT).show();
+                 Toast.makeText(Register_Page.this, "Phone Number is invalid", Toast.LENGTH_SHORT).show();
              }else if(un.length() >= 20){
-                 Toast.makeText(SigninPage.this, "Username can't be more than 20 letters", Toast.LENGTH_SHORT).show();
+                 Toast.makeText(Register_Page.this, "Username can't be more than 20 letters", Toast.LENGTH_SHORT).show();
              }else{
                  validFirst = "Username and Phone Number is valid";
-                 Toast.makeText(SigninPage.this, validFirst, Toast.LENGTH_SHORT).show();
+                 Toast.makeText(Register_Page.this, validFirst, Toast.LENGTH_SHORT).show();
              }
          });
 
@@ -71,7 +71,7 @@ public class SigninPage extends AppCompatActivity {
              if (validSecond == "OTP Verified")
              {
                  //Username and phone number should be stored after clicking this button
-                 Intent redirect_home = new Intent(SigninPage.this,Sign_Up.class );
+                 Intent redirect_home = new Intent(Register_Page.this, LogIn_Page.class );
                  startActivity(redirect_home);
              }
              else

@@ -2,25 +2,24 @@ package com.example.xpense;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Sign_Up extends AppCompatActivity {
+public class LogIn_Page extends AppCompatActivity {
 
     Button get_otp, new_user, sign_up;
     EditText phone_no, in_otp;
     String temp;
     long phone;
     int temp_otp = 1234, otp;
+    //https://developers.google.com/identity/sms-retriever/request
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_log_in);
         get_otp = findViewById(R.id.get_otp);
         new_user = findViewById(R.id.new_user);
         sign_up = findViewById(R.id.sign_up_log);
@@ -53,7 +52,7 @@ public class Sign_Up extends AppCompatActivity {
             otp = Integer.parseInt(in_otp.getText().toString());
             if (otp == temp_otp)
             {
-                Intent verified = new Intent(Sign_Up.this,HomeFragment.class );
+                Intent verified = new Intent(LogIn_Page.this,HomeFragment.class );
                 startActivity(verified);
             }
             else
@@ -65,7 +64,7 @@ public class Sign_Up extends AppCompatActivity {
 
         });
         new_user.setOnClickListener(v -> {
-            Intent redirect_home = new Intent(Sign_Up.this,SigninPage.class );
+            Intent redirect_home = new Intent(LogIn_Page.this, Register_Page.class );
             startActivity(redirect_home);
         });
         }

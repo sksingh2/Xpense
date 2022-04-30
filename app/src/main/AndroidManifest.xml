@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Xpense" >
         <activity
-            android:name=".Sign_Up"
+            android:name=".LogIn_Page"
             android:exported="true" />
         <activity
             android:name=".bottom_navigation"
@@ -25,7 +25,7 @@
             android:name=".MainActivity"
             android:exported="true" >
         </activity>
-        <activity android:name=".SigninPage"
+        <activity android:name=".Register_Page"
             android:exported="true">
         </activity>
     </application>
