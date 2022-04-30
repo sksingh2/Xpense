@@ -13,8 +13,9 @@ public class SigninPage extends AppCompatActivity {
     TextView AppName;
     EditText username,phoneNumber,otpPassword;
     Button verifyOtp,Signin,sendOtp;
-    String un,phone,validSecond,validFirst;
+    String un,temp,validSecond,validFirst;
     int temp_otp = 1234, otp;
+    long phoneNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +31,11 @@ public class SigninPage extends AppCompatActivity {
 
          sendOtp.setOnClickListener(v -> {
              un = username.getText().toString();
-             phone = phoneNumber.getText().toString();
-             if (un.length() >= 20 && phone.length() != 10) {
+             temp = phoneNumber.getText().toString();
+
+             if (un.length() >= 20 && temp.length() != 10) {
                  Toast.makeText(SigninPage.this, "Username can't be more than 20 letters and Phone Number is invalid", Toast.LENGTH_SHORT).show();
-             } else if(phone.length() != 10){
+             } else if(temp.length() != 10){
                  Toast.makeText(SigninPage.this, "Phone Number is invalid", Toast.LENGTH_SHORT).show();
              }else if(un.length() >= 20){
                  Toast.makeText(SigninPage.this, "Username can't be more than 20 letters", Toast.LENGTH_SHORT).show();
@@ -43,7 +45,9 @@ public class SigninPage extends AppCompatActivity {
              }
          });
 
+         //otp setup from phone number should be done here
          verifyOtp.setOnClickListener(v -> {
+             phoneNo = Long.parseLong(temp);
              if (validFirst == "Username and Phone Number is valid")
              {
              //temp_otp="1234";
