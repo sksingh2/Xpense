@@ -3,17 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/card_1"
+    android:background="#B8F0C8"
+    android:padding="10dp"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/home"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/PieChart"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:layout_marginTop="50dp" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/BarChart"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:layout_marginTop="325dp"
+        android:layout_marginBottom="100dp"
+        android:layoutMode="clipBounds" />
 
 </FrameLayout>

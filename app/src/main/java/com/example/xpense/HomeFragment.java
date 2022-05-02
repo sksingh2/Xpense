@@ -1,5 +1,6 @@
 package com.example.xpense;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,12 +9,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
+
+    BarChart barChart;
+    PieChart pieChart;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,6 +42,7 @@ public class HomeFragment extends Fragment {
 
     public HomeFragment() {
         // Required empty public constructor
+
     }
 
     /**
@@ -44,6 +61,7 @@ public class HomeFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+
     }
 
     @Override
@@ -53,12 +71,65 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        pieChart = (PieChart)view.findViewById(R.id.PieChart);
+
+        ArrayList<PieEntry> monthlyExpenses = new ArrayList();
+        monthlyExpenses.add(new PieEntry(2000,"January"));
+        monthlyExpenses.add(new PieEntry(2500,"February"));
+        monthlyExpenses.add(new PieEntry(3000,"March"));
+        monthlyExpenses.add(new PieEntry(2300,"April"));
+        monthlyExpenses.add(new PieEntry(2600,"May"));
+        monthlyExpenses.add(new PieEntry(1800,"June"));
+
+        PieDataSet pieDataSet = new PieDataSet(monthlyExpenses,"Monthly Expense");
+
+        pieDataSet.setColors(ColorTemplate.JOYFUL_COLORS);
+        pieDataSet.setValueTextColor(Color.BLACK);
+        pieDataSet.setValueTextSize(16f);
+
+        PieData pieData = new PieData(pieDataSet);
+
+        pieChart.setData(pieData);
+        pieChart.getDescription().setEnabled(false);
+        pieChart.setCenterText("Monthly Expenses");
+        pieChart.animate();
+
+
+        barChart = (BarChart)view.findViewById(R.id.BarChart);
+
+        ArrayList<BarEntry> expense = new ArrayList();
+        expense.add(new BarEntry(1,220));
+        expense.add(new BarEntry(2,180));
+        expense.add(new BarEntry(3,150));
+        expense.add(new BarEntry(4,200));
+        expense.add(new BarEntry(5,280));
+        expense.add(new BarEntry(6,185));
+
+        BarDataSet barDataSet = new BarDataSet(expense, "Weekly Expenses");
+
+        barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+        barDataSet.setValueTextColor(Color.BLACK);
+        barDataSet.setValueTextSize(16f);
+
+        BarData barData = new BarData(barDataSet);
+
+        barChart.setFitBars(true);
+        barChart.setData(barData);
+        barChart.getDescription().setText("Expenses Weekly Detail");
+        barChart.animateY(2000);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        //return inflater.inflate(R.layout.fragment_home, container, false);
+        return view;
+
     }
+
 }
