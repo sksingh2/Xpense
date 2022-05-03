@@ -89,6 +89,7 @@ public class HomeFragment extends Fragment {
         monthlyExpenses.add(new PieEntry(2300,"April"));
         monthlyExpenses.add(new PieEntry(2600,"May"));
         monthlyExpenses.add(new PieEntry(1800,"June"));
+        monthlyExpenses.add(new PieEntry(2200,"July"));
 
         PieDataSet pieDataSet = new PieDataSet(monthlyExpenses,"Monthly Expense");
 
@@ -101,7 +102,7 @@ public class HomeFragment extends Fragment {
         pieChart.setData(pieData);
         pieChart.getDescription().setEnabled(false);
         pieChart.setCenterText("Monthly Expenses");
-        pieChart.animate();
+        pieChart.animateXY(2000,2000);
 
 
         barChart = (BarChart)view.findViewById(R.id.BarChart);
@@ -112,7 +113,7 @@ public class HomeFragment extends Fragment {
         expense.add(new BarEntry(3,150));
         expense.add(new BarEntry(4,200));
         expense.add(new BarEntry(5,280));
-        expense.add(new BarEntry(6,185));
+
 
         BarDataSet barDataSet = new BarDataSet(expense, "Weekly Expenses");
 
