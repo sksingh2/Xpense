@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -72,6 +73,12 @@ public class ProfileFragment extends Fragment {
         ArrayAdapter<String> converter = new ArrayAdapter<String> (getActivity(),
                 android.R.layout.simple_list_item_1, list_item);
         prof_list.setAdapter(converter);
+        prof_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
         return view;
     }
 }

@@ -6,17 +6,42 @@
     android:background="#B8F0C8"
     tools:context=".ProfileFragment">
 
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Xpense"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold|italic" />
+
     <ListView
         android:id="@+id/prof_list"
         android:layout_width="315dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_corner"
+        android:layout_height="500dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/round_corner"
         android:divider="#B8F0C8"
         android:dividerHeight="2dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:layout_marginTop="620dp"
+        android:layout_marginStart="330dp"
         />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="100dp"/>
 
 </FrameLayout>
