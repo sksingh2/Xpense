@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LogIn_Page extends AppCompatActivity {
@@ -15,7 +16,7 @@ public class LogIn_Page extends AppCompatActivity {
     String temp;
     long phone;
     int temp_otp = 1234, otp;
-    //https://developers.google.com/identity/sms-retriever/request
+    //https://developers.google.com/identity/sms-retriever/request sms verification link res
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +53,7 @@ public class LogIn_Page extends AppCompatActivity {
             otp = Integer.parseInt(in_otp.getText().toString());
             if (otp == temp_otp)
             {
-                Intent verified = new Intent(LogIn_Page.this,HomeFragment.class );
+                Intent verified = new Intent(LogIn_Page.this,bottom_navigation.class );
                 startActivity(verified);
             }
             else

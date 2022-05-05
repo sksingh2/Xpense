@@ -7,11 +7,29 @@
     tools:context=".LogIn_Page"
     android:background="#B8F0C8">
 
+
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="350dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="cursive"
+            android:padding="70sp"
+            android:text="@string/login_text"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <EditText
             android:id="@+id/phone_no"
             android:layout_width="251dp"
             android:layout_height="57dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="52dp"
             android:drawableStart="@drawable/ic_action_phone"
             android:drawablePadding="10dp"
             android:ems="10"
@@ -52,7 +70,7 @@
             app:layout_constraintHorizontal_bias="0.537"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.426" />
+            app:layout_constraintVertical_bias="0.502" />
 
         <Button
             android:id="@+id/sign_up_log"
@@ -60,16 +78,17 @@
             android:layout_height="50dp"
             android:layout_marginStart="159dp"
             android:layout_marginEnd="156dp"
-            android:layout_marginBottom="300dp"
+            android:layout_marginBottom="264dp"
+            android:backgroundTint="#38C98D"
             android:drawableEnd="@drawable/ic_action_login"
             android:drawablePadding="4dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:text="@string/login"
             android:textSize="12sp"
-            android:backgroundTint="#38C98D"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
@@ -78,7 +97,7 @@
             android:layout_height="44dp"
             android:layout_marginStart="228dp"
             android:layout_marginEnd="87dp"
-            android:layout_marginBottom="192dp"
+            android:layout_marginBottom="184dp"
             android:backgroundTint="#38C98D"
             android:drawableLeft="@drawable/ic_action_register"
             android:drawablePadding="10dp"
@@ -95,38 +114,18 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/login_text"
-            android:layout_width="290dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="80dp"
-            android:padding="4sp"
-            android:paddingLeft="2sp"
-            android:paddingTop="2sp"
-            android:paddingEnd="2sp"
-            android:paddingRight="2sp"
-            android:paddingBottom="2sp"
-            android:text="@string/login_text"
-            android:textAlignment="center"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/textView"
-            android:layout_width="99dp"
-            android:layout_height="43dp"
+            android:layout_width="96dp"
+            android:layout_height="44dp"
             android:layout_marginStart="107dp"
-            android:layout_marginBottom="196dp"
+            android:layout_marginBottom="184dp"
 
             android:padding="10sp"
             android:text="@string/new_user"
             android:textAlignment="textEnd"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/new_user"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.307"
             app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
