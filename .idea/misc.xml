@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.12715298885511653" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_sign_up.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_signin_page.xml" value="0.2" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_friend.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_groups.xml" value="0.22056159420289856" />
-        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_home.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_profile.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/menu/item_menu.xml" value="0.25" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_friend.xml" value="0.2665" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_group.xml" value="0.2665" />
@@ -46,7 +49,7 @@
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_signin_page.xml" value="0.27447916666666666" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_signin_verify_otpprototype.xml" value="0.264" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/fragment_home.xml" value="0.2708333333333333" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/style.xml" value="0.1" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/menu/item_menu.xml" value="0.27447916666666666" />
       </map>
