@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 /**
@@ -68,11 +69,16 @@ public class ProfileFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_profile, container, false);
         // Inflate the layout for this fragment
         ListView prof_list;
+        Button add;
+        add = (Button)view.findViewById(R.id.add);
         String [] list_item = {"Bills", "Cosmetic", "Gifts", "Grocies", "Medicine", "Party", "Payback", "Project", "Rent", "Repair", "Snacks", "Stationary", "Subscription"};
         prof_list = (ListView) view.findViewById(R.id.prof_list);
         ArrayAdapter<String> converter = new ArrayAdapter<String> (getActivity(),
                 android.R.layout.simple_list_item_1, list_item);
         prof_list.setAdapter(converter);
+        add.setOnClickListener(v -> {
+
+        });
         prof_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

@@ -25,6 +25,7 @@
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_home.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_profile.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/menu/item_menu.xml" value="0.27447916666666666" />
+        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable-anydpi/ic_action_add.xml" value="0.155" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable-anydpi/ic_action_lock.xml" value="0.259" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable-anydpi/ic_action_login.xml" value="0.259" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.259" />
@@ -41,6 +42,7 @@
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/item_selector.xml" value="0.259" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/logo.xml" value="0.1" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/round_corner.xml" value="0.259" />
+        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/rounded_button.xml" value="0.244" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.264" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_log_in.xml" value="0.264" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_main.xml" value="0.2708333333333333" />
@@ -49,7 +51,7 @@
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_signin_page.xml" value="0.27447916666666666" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_signin_verify_otpprototype.xml" value="0.264" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/fragment_home.xml" value="0.2708333333333333" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/fragment_profile.xml" value="0.23859649122807017" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/style.xml" value="0.1" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/menu/item_menu.xml" value="0.27447916666666666" />
       </map>
