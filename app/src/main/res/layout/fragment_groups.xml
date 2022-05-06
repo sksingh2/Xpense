@@ -3,46 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
     android:background="#B8F0C8"
     tools:context=".GroupsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/groups"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="60dp"
-        android:text="@string/groups"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="Xpense"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textStyle="bold|italic" />
-
-    <View
-        android:id="@+id/divider2"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_Groups"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="50dp"
-        android:background="?android:attr/listDivider"
-        android:backgroundTint="#000000" />
-
-    <View
-        android:id="@+id/divider4"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="100dp"
-        android:background="?android:attr/listDivider"
-        android:backgroundTint="#000000"
-        android:outlineSpotShadowColor="@color/black" />
-
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:backgroundTint="@color/white"
+        app:title="@string/groups"
+        app:titleMarginStart="30dp"
+        app:logo="@drawable/ic_menu"/>
 </FrameLayout>

@@ -8,6 +8,7 @@
     android:background="@color/light_white"
     tools:context=".bottom_navigation">
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/botom_navigation"
         android:layout_width="match_parent"
@@ -24,5 +25,13 @@
         app:itemRippleColor="@android:color/transparent"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/item_menu" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
 
 </RelativeLayout>

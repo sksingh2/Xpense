@@ -1,13 +1,25 @@
 package com.example.xpense;
 
+import android.app.ActionBar;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
@@ -28,6 +40,7 @@ import java.util.ArrayList;
  */
 public class HomeFragment extends Fragment {
 
+    DrawerLayout drawerLayout;
     BarChart barChart;
     PieChart pieChart;
 
@@ -78,8 +91,21 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        //Toolbar settings
+        Toolbar toolbar = (Toolbar)view.findViewById(R.id.toolbarHome);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+        setHasOptionsMenu(true);
+
+       /* ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(getActivity(), drawerLayout,toolbar,R.string.nav_open
+                ,R.string.nav_close);
+
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+*/
+        //PieChart settings
         pieChart = (PieChart)view.findViewById(R.id.PieChart);
 
         ArrayList<PieEntry> monthlyExpenses = new ArrayList();
@@ -104,7 +130,7 @@ public class HomeFragment extends Fragment {
         pieChart.setCenterText("Monthly Expenses");
         pieChart.animateXY(2000,2000);
 
-
+        //BarChart settings
         barChart = (BarChart)view.findViewById(R.id.BarChart);
 
         ArrayList<BarEntry> expense = new ArrayList();
@@ -133,4 +159,54 @@ public class HomeFragment extends Fragment {
 
     }
 
+    // code used instead of back press
+   /* @Override
+    public void onResume() {
+        super.onResume();
+
+        if(getView() == null){
+            return;
+        }
+
+        getView().setFocusableInTouchMode(true);
+        getView().requestFocus();
+        getView().setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+               if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK)
+               {
+                   return true;
+               }
+               return false;
+            }
+
+        });
+    }
+    */
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.toolbar_menu , menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.profile)
+        {
+            Intent direct_Profile = new Intent(getActivity(), Profile_Page.class );
+            startActivity(direct_Profile);
+        }
+        if (id == R.id.settings)
+        {
+            Intent direct_Profile = new Intent(getActivity(), Settings.class );
+            startActivity(direct_Profile);
+        }
+        if (id == R.id.about)
+        {
+
+        }
+        return true;
+    }
 }
