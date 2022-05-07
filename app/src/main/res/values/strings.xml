@@ -31,4 +31,7 @@
 
     <string name="nav_open">Open Navigation</string>
     <string name="nav_close">Close Navigation</string>
+    <string name="add_contact">add contact</string>
+    <string name="add_group">add group</string>
+    <string name="add_personal_items">add personal items</string>
 </resources>

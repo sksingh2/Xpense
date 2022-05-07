@@ -14,6 +14,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +24,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class GroupsFragment extends Fragment {
+
+    FloatingActionButton floatingActionButton;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,9 +72,19 @@ public class GroupsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_groups, container, false);
 
+        //Toolbar settings
         Toolbar toolbar = (Toolbar)view.findViewById(R.id.toolbar_Groups);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         setHasOptionsMenu(true);
+
+        //Floating button action
+        floatingActionButton = (FloatingActionButton)view.findViewById(R.id.float_group_add);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "this is to add contact and form a group", Toast.LENGTH_SHORT).show();
+            }
+        });
         // Inflate the layout for this fragment
         //return inflater.inflate(R.inflater.inflate(R.menu.toolbar_menu , menu);layout.fragment_friend, container, false);
         return view;
@@ -96,7 +111,7 @@ public class GroupsFragment extends Fragment {
         }
         if (id == R.id.search)
         {
-
+            Toast.makeText(getActivity(), "This is search button", Toast.LENGTH_SHORT).show();
         }
         return true;
     }

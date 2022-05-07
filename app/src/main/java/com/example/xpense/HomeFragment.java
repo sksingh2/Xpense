@@ -120,6 +120,7 @@ public class HomeFragment extends Fragment {
         PieDataSet pieDataSet = new PieDataSet(monthlyExpenses,"Monthly Expense");
 
         pieDataSet.setColors(ColorTemplate.JOYFUL_COLORS);
+
         pieDataSet.setValueTextColor(Color.BLACK);
         pieDataSet.setValueTextSize(16f);
 
