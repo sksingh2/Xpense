@@ -78,14 +78,6 @@ public class FriendFragment extends Fragment {
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         setHasOptionsMenu(true);
 
-        //Floating button action settings
-        floatingActionButton = (FloatingActionButton)view.findViewById(R.id.float_friend_add);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(), "this is to add contacts", Toast.LENGTH_SHORT).show();
-            }
-        });
         // Inflate the layout for this fragment
         //return inflater.inflate(R.inflater.inflate(R.menu.toolbar_menu , menu);layout.fragment_friend, container, false);
         return view;
@@ -109,10 +101,15 @@ public class FriendFragment extends Fragment {
             Intent direct_Profile = new Intent(getActivity(), About_Page.class );
             startActivity(direct_Profile);
         }
-        if (id == R.id.search)
+        if (id == R.id.search_f)
         {
             Toast.makeText(getActivity(), "This is search button", Toast.LENGTH_SHORT).show();
         }
+        if (id == R.id.add_f)
+        {
+            Toast.makeText(getActivity(), "This is add message", Toast.LENGTH_SHORT).show();
+        }
+
         return true;
     }
 }

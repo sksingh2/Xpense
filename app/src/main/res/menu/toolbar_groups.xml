@@ -12,9 +12,14 @@
         android:title="About"
         />
     <item
-        android:id="@+id/search"
+        android:id="@+id/search_g"
         android:title="Search"
         android:icon="@drawable/ic_search"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/add_g"
+        android:icon="@drawable/ic_add"
+        android:title="Add"
         app:showAsAction="always"/>
 
 </menu>

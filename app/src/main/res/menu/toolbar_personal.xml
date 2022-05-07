@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding = "5dp">
 
     <item
         android:id="@+id/settings"
-        android:icon="@drawable/ic_settings"
+        android:logo="@drawable/ic_settings"
         android:title="Settings"
         />
     <item
@@ -12,8 +13,13 @@
         android:title="About"
         />
     <item
-        android:id="@+id/search"
+        android:id="@+id/search_p"
         android:title="Search"
         android:icon="@drawable/ic_search"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/add_p"
+        android:icon="@drawable/ic_add"
+        android:title="Add"
         app:showAsAction="always"/>
 </menu>
