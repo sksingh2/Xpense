@@ -46,8 +46,8 @@
         android:backgroundTint="@color/white"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:title="@string/app_name"
         app:titleMarginStart="30dp"
+        app:logo="@drawable/logo_text"
         />
 
     </LinearLayout>

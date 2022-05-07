@@ -34,4 +34,6 @@
     <string name="add_contact">add contact</string>
     <string name="add_group">add group</string>
     <string name="add_personal_items">add personal items</string>
+
+    <string name="message">Enetr the new category name</string>
 </resources>
