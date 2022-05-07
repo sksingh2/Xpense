@@ -128,7 +128,7 @@ public class HomeFragment extends Fragment {
         pieChart.setData(pieData);
         pieChart.getDescription().setEnabled(false);
         pieChart.setCenterText("Monthly Expenses");
-        pieChart.animateXY(2000,2000);
+        pieChart.animateX(2000);
 
         //BarChart settings
         barChart = (BarChart)view.findViewById(R.id.BarChart);
