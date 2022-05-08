@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#B8F0C8"
+    android:id="@+id/HomePageFragment"
     android:padding="10dp"
     tools:context=".HomeFragment">
 
@@ -17,14 +18,14 @@
         android:layout_height="275dp"
         android:background="@drawable/round_corner"
         android:backgroundTint="@color/white"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="65dp" />
 
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/BarChart"
         android:layout_width="match_parent"
         android:layout_height="275dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="345dp"
         android:background="@drawable/round_corner"
         android:backgroundTint="@color/white"
         android:layout_marginBottom="100dp"
@@ -49,6 +50,11 @@
         app:titleMarginStart="30dp"
         app:logo="@drawable/logo_text"
         />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/containerNav"/>
 
     </LinearLayout>
 

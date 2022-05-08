@@ -21,6 +21,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -34,6 +35,7 @@ import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -48,6 +50,7 @@ public class HomeFragment extends Fragment {
     NavigationView navigationView;
     BarChart barChart;
     PieChart pieChart;
+    FrameLayout homePage;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -110,15 +113,59 @@ public class HomeFragment extends Fragment {
 
         navigationView = (NavigationView)view.findViewById(R.id.navigationView);
 
+        homePage = (FrameLayout)view.findViewById(R.id.HomePageFragment);
+
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(getActivity(), drawerLayout,toolbar,R.string.nav_open
                 ,R.string.nav_close);
 
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-      /*  navigationView.setNavigationItemSelectedListener((OnNavigationItemSelectedListener) getActivity());
+       navigationView.setNavigationItemSelectedListener(new OnNavigationItemSelectedListener() {
+           Fragment fragment;
+           @Override
+           public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        requireActivity()
+               
+               switch (item.getItemId())
+               {
+                   case R.id.profile:
+                       fragment = new Profile_fragment();
+                       break;
+                   case R.id.settings:
+                       fragment = new Settings_fragment();
+                       break;
+                   case R.id.about:
+                       fragment = new About_fragment();
+                       break;
+                   case R.id.help:
+                       fragment = new Help_fragment();
+                       break;
+                   case R.id.logout:
+
+                       Snackbar snackbar = Snackbar.make(homePage,"Are you sure you want to logout",Snackbar.LENGTH_LONG)
+                               .setAction("Yes", new View.OnClickListener() {
+                                   @Override
+                                   public void onClick(View v) {
+                                       Intent logIn = new Intent(getActivity(),LogIn_Page.class);
+                                       startActivity(logIn);
+                                   }
+                               });
+                       snackbar.show();
+                       break;
+               }
+
+               getParentFragmentManager().beginTransaction().replace(R.id.containerNav,fragment).commit();
+               navigationView.setCheckedItem(item);
+               drawerLayout.closeDrawer(GravityCompat.START);
+               return true;
+           }
+       });
+
+       //have to work on back pressed and check the whole navigation system
+
+        /*   requireActivity()
                 .onBackPressed(); {
             if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                 drawerLayout.closeDrawer(GravityCompat.START);
@@ -182,6 +229,8 @@ public class HomeFragment extends Fragment {
         return view;
 
     }
+
+    // set up drawer layout
    /* private void setupDrawerContent(NavigationView navigationView) {
         this.navigationView = navigationView;
         navigationView.setNavigationItemSelectedListener(
@@ -195,39 +244,6 @@ public class HomeFragment extends Fragment {
                 });
     }
 
-    // code used instead of back press
-
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.profile)
-        {
-            Intent direct_Profile = new Intent(getActivity(), Profile_Page.class );
-            startActivity(direct_Profile);
-        }
-        if (id == R.id.settings)
-        {
-            Intent direct_Profile = new Intent(getActivity(), Settings.class );
-            startActivity(direct_Profile);
-        }
-        if (id == R.id.about)
-        {
-            Intent direct_about = new Intent(getActivity(), About_Page.class );
-            startActivity(direct_about);
-        }
-        if (id == R.id.help)
-        {
-            Intent direct_help = new Intent(getActivity(), Help_page.class );
-            startActivity(direct_help);
-        }
-
-        DrawerLayout drawerLayout = (DrawerLayout)navigationView.findViewById(R.id.drawerLayout);
-        drawerLayout.closeDrawer(GravityCompat.START);
-
-        return true;
-    }
-*/
+  */
 
 }
