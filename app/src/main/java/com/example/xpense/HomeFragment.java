@@ -9,9 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -30,6 +32,8 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener;
 
 import java.util.ArrayList;
 
@@ -41,6 +45,7 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
 
     DrawerLayout drawerLayout;
+    NavigationView navigationView;
     BarChart barChart;
     PieChart pieChart;
 
@@ -99,12 +104,30 @@ public class HomeFragment extends Fragment {
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         setHasOptionsMenu(true);
 
-       /* ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(getActivity(), drawerLayout,toolbar,R.string.nav_open
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        drawerLayout = (DrawerLayout)view.findViewById(R.id.drawerLayout);
+
+        navigationView = (NavigationView)view.findViewById(R.id.navigationView);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(getActivity(), drawerLayout,toolbar,R.string.nav_open
                 ,R.string.nav_close);
 
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+      /*  navigationView.setNavigationItemSelectedListener((OnNavigationItemSelectedListener) getActivity());
+
+        requireActivity()
+                .onBackPressed(); {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+            } else {
+                super.requireActivity().onBackPressed();
+            }
+        }
 */
+
         //PieChart settings
         pieChart = (PieChart)view.findViewById(R.id.PieChart);
 
@@ -159,39 +182,24 @@ public class HomeFragment extends Fragment {
         return view;
 
     }
+   /* private void setupDrawerContent(NavigationView navigationView) {
+        this.navigationView = navigationView;
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                        menuItem.setChecked(true);
+                        drawerLayout.closeDrawers();
+                        return true;
+                    }
+                });
+    }
 
     // code used instead of back press
-   /* @Override
-    public void onResume() {
-        super.onResume();
 
-        if(getView() == null){
-            return;
-        }
-
-        getView().setFocusableInTouchMode(true);
-        getView().requestFocus();
-        getView().setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-               if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK)
-               {
-                   return true;
-               }
-               return false;
-            }
-
-        });
-    }
-    */
 
     @Override
-    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-        inflater.inflate(R.menu.toolbar_menu , menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
         if (id == R.id.profile)
@@ -206,8 +214,20 @@ public class HomeFragment extends Fragment {
         }
         if (id == R.id.about)
         {
-
+            Intent direct_about = new Intent(getActivity(), About_Page.class );
+            startActivity(direct_about);
         }
+        if (id == R.id.help)
+        {
+            Intent direct_help = new Intent(getActivity(), Help_page.class );
+            startActivity(direct_help);
+        }
+
+        DrawerLayout drawerLayout = (DrawerLayout)navigationView.findViewById(R.id.drawerLayout);
+        drawerLayout.closeDrawer(GravityCompat.START);
+
         return true;
     }
+*/
+
 }

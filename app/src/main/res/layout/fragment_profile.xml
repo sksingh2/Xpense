@@ -34,7 +34,7 @@
         android:backgroundTint="@color/white"
         app:title="Personal"
         app:titleMarginStart="30dp"
-        app:logo="@drawable/ic_menu"/>
+        app:logo="@drawable/ic_logo"/>
 
 
     </RelativeLayout>

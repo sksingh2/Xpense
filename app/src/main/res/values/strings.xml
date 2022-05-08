@@ -29,8 +29,10 @@
     <string name="verify_otp">Verify OTP</string>
     <string name="send_otp">Send OTP</string>
 
-    <string name="nav_open">Open Navigation</string>
-    <string name="nav_close">Close Navigation</string>
+    <string name="nav_open">Open Navigation Drawer</string>
+    <string name="nav_close">Close Navigation Drawer</string>
+
+    <!--toolbar values -->
     <string name="add_contact">add contact</string>
     <string name="add_group">add group</string>
     <string name="add_personal_items">add personal items</string>

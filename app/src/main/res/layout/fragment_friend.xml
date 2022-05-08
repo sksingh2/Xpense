@@ -16,12 +16,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/round_corner"
+        android:backgroundTint="@color/white"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        android:backgroundTint="@color/white"
+        app:logo="@drawable/ic_logo"
         app:title="@string/friends"
-        app:logo="@drawable/ic_menu"
-        app:titleMarginStart="30dp"/>
+        app:titleMarginStart="30dp" />
 
 
 </RelativeLayout>

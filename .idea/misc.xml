@@ -3,29 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_about.xml" value="0.127" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_friends.xml" value="0.2665" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_groups.xml" value="0.2665" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_logo.xml" value="0.2665" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_menu.xml" value="0.2665" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_profile.xml" value="0.2665" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_search.xml" value="0.2665" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_settings.xml" value="0.2665" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/drawable/item_selector.xml" value="0.127" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_about_page.xml" value="0.21462163317657118" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.264" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_help_page.xml" value="0.21462163317657118" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_profile_page.xml" value="0.2" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_settings.xml" value="0.176" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_sign_up.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/activity_signin_page.xml" value="0.2" />
-        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_friend.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_friend.xml" value="0.136" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_groups.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_help_fragment.xml" value="0.2980997624703088" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/nav_header.xml" value="0.21462163317657118" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/layout/toolbar_page.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/menu/item_menu.xml" value="0.25" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/menu/toolbar_friends.xml" value="0.21462163317657118" />
-        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/menu/toolbar_groups.xml" value="0.21462163317657118" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/menu/toolbar_groups.xml" value="0.1" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/menu/toolbar_menu.xml" value="0.26145833333333335" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/menu/toolbar_personal.xml" value="0.21462163317657118" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1265" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1265" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/Xpense/app/src/main/res/xml/nav_header.xml" value="0.21462163317657118" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_friend.xml" value="0.2665" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Xpense/app/src/main/res/drawable/ic_group.xml" value="0.2665" />
@@ -50,28 +57,17 @@
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.259" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/check.xml" value="0.279" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/dddd.xml" value="0.225" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_add.xml" value="0.2785" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_friends.xml" value="0.259" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_groups.xml" value="0.259" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_home.xml" value="0.259" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_lock.xml" value="0.2785" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_login.xml" value="0.2785" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_login_page_back.xml" value="0.271" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_logo.xml" value="0.1945" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_name.xml" value="0.2785" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_phone.xml" value="0.2785" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_profile.xml" value="0.259" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_search.xml" value="0.1945" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_settings.xml" value="0.1945" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_signup_arrow.xml" value="0.2785" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/ic_signup_icon.xml" value="0.2785" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/item_selector.xml" value="0.259" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/logo.xml" value="0.1" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/round_corner.xml" value="0.259" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/drawable/rounded_button.xml" value="0.244" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.264" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_log_in.xml" value="0.1" />
+        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_log_in.xml" value="0.264" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_main.xml" value="0.2708333333333333" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_register_page.xml" value="0.21240942028985507" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_sign_up.xml" value="0.27447916666666666" />
@@ -79,12 +75,8 @@
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/activity_signin_verify_otpprototype.xml" value="0.264" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/fragment_home.xml" value="0.2708333333333333" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/fragment_profile.xml" value="0.23859649122807017" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/profile_add_input.xml" value="0.1" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/profile_input.xml" value="0.27447916666666666" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/layout/style.xml" value="0.1" />
         <entry key="..\:/andiod studio/Xpense2/app/src/main/res/menu/item_menu.xml" value="0.27447916666666666" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.279" />
-        <entry key="..\:/andiod studio/Xpense2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.279" />
       </map>
     </option>
   </component>
@@ -93,12 +85,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.1" />
-      </ProjectState>
-    </option>
   </component>
 </project>

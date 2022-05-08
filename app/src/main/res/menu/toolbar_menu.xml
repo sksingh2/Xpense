@@ -18,6 +18,7 @@
     <item
         android:id="@+id/about"
         android:title="About"
+        android:icon="@drawable/ic_about"
         />
         <item
             android:id="@+id/help"
