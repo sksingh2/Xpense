@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LogIn_Page"
-    android:background="@drawable/login_backgroung"
+    android:background="@drawable/login_page"
     android:layout_gravity="center"
     android:padding="10dp">
 
@@ -110,5 +110,25 @@
             app:layout_constraintEnd_toStartOf="@+id/new_user"
             app:layout_constraintHorizontal_bias="0.153"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="196dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="80dp"
+            android:drawableStart="@drawable/ic_login_icon"
+            android:fontFamily="@font/belgrano"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

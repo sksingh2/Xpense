@@ -3,7 +3,7 @@
 
     <!-- used in signin page too -->
     <string name="phone_number">Phone Number</string>
-    <string name="signup">SignUp</string>
+
 
     <!--signUp page values -->
     <string name="get_otp">Get Otp</string>
@@ -11,6 +11,7 @@
     <string name="otp">OTP</string>
     <string name="new_user">New User ?</string>
     <string name="login_text">LogIn</string>
+    <string name="signup_text">SignUp !</string>
 
     <string name="home">Home</string>
     <string name="friends">Friends</string>
@@ -28,6 +29,7 @@
     <string name="enter_otp">Enter OTP</string>
     <string name="verify_otp">Verify OTP</string>
     <string name="send_otp">Send OTP</string>
+    <string name="signup">SignUp</string>
 
     <string name="nav_open">Open Navigation Drawer</string>
     <string name="nav_close">Close Navigation Drawer</string>
