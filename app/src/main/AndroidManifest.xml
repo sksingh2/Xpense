@@ -10,18 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Xpense">
         <activity
-            android:name=".Help_page"
-            android:exported="false" />
-        <activity
-            android:name=".About_Page"
-            android:exported="false" />
-        <activity
-            android:name=".Settings"
-            android:exported="false" />
-        <activity
-            android:name=".Profile_Page"
-            android:exported="false" />
-        <activity
             android:name=".LogIn_Page"
             android:exported="true" />
         <activity
