@@ -2,17 +2,12 @@ package com.example.xpense;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class bottom_navigation extends AppCompatActivity {
@@ -55,7 +50,7 @@ public class bottom_navigation extends AppCompatActivity {
                         break;
 
                     case R.id.nav_profile:
-                        fragment = new ProfileFragment();
+                        fragment = new PersonalFragment();
                         break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.body_container,fragment).commit();

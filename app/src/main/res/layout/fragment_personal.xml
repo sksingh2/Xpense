@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#B8F0C8"
     android:padding="10dp"
-    tools:context=".ProfileFragment">
+    tools:context=".PersonalFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
