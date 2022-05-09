@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
@@ -14,9 +15,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,7 +26,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
  */
 public class GroupsFragment extends Fragment {
 
-    FloatingActionButton floatingActionButton;
+    ListView listView;
+    String[] groupName = {"Xpense","Legends","Andi Mandi Sandi","Pakodi"};
+    ArrayAdapter adapter;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -77,7 +80,10 @@ public class GroupsFragment extends Fragment {
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         setHasOptionsMenu(true);
 
-
+        //Search View code settings
+        listView = (ListView) view.findViewById(R.id.groupList);
+        adapter = new ArrayAdapter(getActivity(),android.R.layout.simple_list_item_1,groupName);
+        listView.setAdapter(adapter);
         // Inflate the layout for this fragment
         //return inflater.inflate(R.inflater.inflate(R.menu.toolbar_menu , menu);layout.fragment_friend, container, false);
         return view;
@@ -104,7 +110,21 @@ public class GroupsFragment extends Fragment {
         }
         if (id == R.id.search_g)
         {
-            Toast.makeText(getActivity(), "This is search button", Toast.LENGTH_SHORT).show();
+            SearchView searchview = (SearchView) item.getActionView();
+            searchview.setQueryHint("Type here to Search");
+
+            searchview.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+                    adapter.getFilter().filter(newText);
+                    return false;
+                }
+            });
         }
         if (id == R.id.add_g)
         {

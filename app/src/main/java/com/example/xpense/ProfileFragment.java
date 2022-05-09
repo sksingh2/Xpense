@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
@@ -29,7 +30,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
  */
 public class ProfileFragment extends Fragment {
 
-    FloatingActionButton floatingActionButton;
+    ListView prof_list;
+    String [] list_item = {"Bills", "Cosmetic", "Gifts", "Grocies", "Medicine", "Party", "Payback", "Project", "Rent", "Repair",
+            "Snacks", "Stationary", "Subscription"};
+    ArrayAdapter converter;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -80,20 +84,14 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_profile, container, false);
         // Inflate the layout for this fragment
-        ListView prof_list;
 
-        String [] list_item = {"Bills", "Cosmetic", "Gifts", "Grocies", "Medicine", "Party", "Payback", "Project", "Rent", "Repair", "Snacks", "Stationary", "Subscription"};
+
+
         prof_list = (ListView) view.findViewById(R.id.prof_list);
-        ArrayAdapter<String> converter = new ArrayAdapter<String> (getActivity(),
+        converter = new ArrayAdapter(getActivity(),
                 android.R.layout.simple_list_item_1, list_item);
         prof_list.setAdapter(converter);
 
-        prof_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-            }
-        });
 
         //toolbar settings
         Toolbar toolbar = (Toolbar)view.findViewById(R.id.toolbarPersonal);
@@ -125,7 +123,21 @@ public class ProfileFragment extends Fragment {
         }
         if (id == R.id.search_p)
         {
-            Toast.makeText(getActivity(), "This is search button", Toast.LENGTH_SHORT).show();
+            SearchView searchView = (SearchView) item.getActionView();
+            searchView.setQueryHint("Type here to search");
+
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+                    converter.getFilter().filter(newText);
+                    return false;
+                }
+            });
         }
         if (id == R.id.add_p)
         {
