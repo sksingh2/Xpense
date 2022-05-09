@@ -98,18 +98,18 @@ public class FriendFragment extends Fragment {
         inflater.inflate(R.menu.toolbar_friends , menu);
     }
 
+    Fragment fragment;
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
         int id = item.getItemId();
         if (id == R.id.settings)
         {
-            Intent direct_Profile = new Intent(getActivity(), Settings.class );
-            startActivity(direct_Profile);
+            fragment = new Settings_fragment();
         }
         if (id == R.id.about)
         {
-            Intent direct_Profile = new Intent(getActivity(), About_Page.class );
-            startActivity(direct_Profile);
+            fragment = new About_fragment();
         }
         if (id == R.id.search_f)
         {
@@ -135,6 +135,7 @@ public class FriendFragment extends Fragment {
             Toast.makeText(getActivity(), "This is add message", Toast.LENGTH_SHORT).show();
         }
 
+        getParentFragmentManager().beginTransaction().replace(R.id.containerNavFriend,fragment).commit();
         return true;
     }
 }

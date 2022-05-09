@@ -37,6 +37,11 @@
             android:dividerHeight="2dp"
              />
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/containerNavPersonal"/>
+
 
     </RelativeLayout>
 </FrameLayout>
