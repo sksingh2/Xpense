@@ -26,7 +26,7 @@ import android.widget.Toast;
 public class PersonalFragment extends Fragment {
 
     ListView prof_list;
-    String [] list_item = {"Bills", "Cosmetic", "Gifts", "Grocies", "Medicine", "Party", "Payback", "Project", "Rent", "Repair",
+    String [] list_item = {"Bills", "Cosmetic", "Gifts", "Groceries", "Medicine", "Party", "Payback", "Project", "Rent", "Repair",
             "Snacks", "Stationary", "Subscription"};
     ArrayAdapter converter;
 
@@ -111,11 +111,13 @@ public class PersonalFragment extends Fragment {
         if (id == R.id.settings)
         {
             fragment = new Settings_fragment();
+            getParentFragmentManager().beginTransaction().replace(R.id.containerNavPersonal,fragment).commit();
         }
         if (id == R.id.about)
         {
 
             fragment = new About_fragment();
+            getParentFragmentManager().beginTransaction().replace(R.id.containerNavPersonal,fragment).commit();
         }
         if (id == R.id.search_p)
         {
@@ -140,7 +142,7 @@ public class PersonalFragment extends Fragment {
             Toast.makeText(getActivity(), "This is add message", Toast.LENGTH_SHORT).show();
         }
 
-        getParentFragmentManager().beginTransaction().replace(R.id.containerNavPersonal,fragment).commit();
+
         return true;
     }
 }

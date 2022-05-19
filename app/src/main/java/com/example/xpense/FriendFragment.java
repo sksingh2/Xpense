@@ -106,10 +106,12 @@ public class FriendFragment extends Fragment {
         if (id == R.id.settings)
         {
             fragment = new Settings_fragment();
+            getParentFragmentManager().beginTransaction().replace(R.id.containerNavFriend,fragment).commit();
         }
         if (id == R.id.about)
         {
             fragment = new About_fragment();
+            getParentFragmentManager().beginTransaction().replace(R.id.containerNavFriend,fragment).commit();
         }
         if (id == R.id.search_f)
         {
@@ -135,7 +137,7 @@ public class FriendFragment extends Fragment {
             Toast.makeText(getActivity(), "This is add message", Toast.LENGTH_SHORT).show();
         }
 
-        getParentFragmentManager().beginTransaction().replace(R.id.containerNavFriend,fragment).commit();
+
         return true;
     }
 }
