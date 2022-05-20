@@ -36,6 +36,7 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -132,15 +133,19 @@ public class HomeFragment extends Fragment {
                {
                    case R.id.profile:
                        fragment = new Profile_fragment();
+                       getParentFragmentManager().beginTransaction().replace(R.id.containerNav,fragment).commit();
                        break;
                    case R.id.settings:
                        fragment = new Settings_fragment();
+                       getParentFragmentManager().beginTransaction().replace(R.id.containerNav,fragment).commit();
                        break;
                    case R.id.about:
                        fragment = new About_fragment();
+                       getParentFragmentManager().beginTransaction().replace(R.id.containerNav,fragment).commit();
                        break;
                    case R.id.help:
                        fragment = new Help_fragment();
+                       getParentFragmentManager().beginTransaction().replace(R.id.containerNav,fragment).commit();
                        break;
                    case R.id.logout:
 
@@ -148,15 +153,17 @@ public class HomeFragment extends Fragment {
                                .setAction("Yes", new View.OnClickListener() {
                                    @Override
                                    public void onClick(View v) {
-                                       Intent logIn = new Intent(getActivity(),LogIn_Page.class);
-                                       startActivity(logIn);
+                                       FirebaseAuth.getInstance().signOut();
+                                       startActivity(new Intent(getActivity(),LogIn_Page.class));
+                                       getActivity().finish();
+
                                    }
                                });
                        snackbar.show();
                        break;
                }
 
-               getParentFragmentManager().beginTransaction().replace(R.id.containerNav,fragment).commit();
+
                navigationView.setCheckedItem(item);
                drawerLayout.closeDrawer(GravityCompat.START);
                return true;

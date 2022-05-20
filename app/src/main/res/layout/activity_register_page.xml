@@ -12,6 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
+        android:drawableLeft="@drawable/ic_login_name"
+        android:drawablePadding="4dp"
         android:ems="10"
         android:hint="@string/enter_username"
         android:inputType="textPersonName"
@@ -21,20 +23,20 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:drawableLeft="@drawable/ic_login_name"
-        android:drawablePadding="4dp"/>
+        app:layout_constraintVertical_bias="0.414" />
 
     <Button
         android:id="@+id/buttonSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="132dp"
         android:backgroundTint="#38C98D"
-        android:text="@string/register"
         android:drawableEnd="@drawable/ic_signup_arrow"
+        android:enabled="false"
+        android:text="@string/register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -54,13 +56,15 @@
         android:id="@+id/phoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="135dp"
+        android:layout_marginBottom="172dp"
         android:text="@string/phone_number"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/EnterOtp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.22"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterUsername"
+        app:layout_constraintVertical_bias="0.803" />
 
     <TextView
         android:id="@+id/EnterOtp"
@@ -89,65 +93,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/OtpPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:ems="10"
-        android:hint="@string/enter_otp"
-        android:inputType="numberPassword"
-        android:minHeight="48dp"
         android:drawableLeft="@drawable/ic_login_lock"
         android:drawablePadding="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/VerifyOTP"
+        android:ems="10"
+        android:hint="@string/enter_otp"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSignUp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sendOTP"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintTop_toBottomOf="@+id/EnterOtp"
+        app:layout_constraintVertical_bias="0.241" />
 
     <EditText
         android:id="@+id/EnterPhoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
+        android:drawableLeft="@drawable/ic_login_phone"
+        android:drawablePadding="4dp"
         android:ems="10"
         android:hint="@string/enter_phone_no"
         android:inputType="phone"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/OtpPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973"
-        android:drawableLeft="@drawable/ic_login_phone"
-        android:drawablePadding="4dp"/>
-
-    <Button
-        android:id="@+id/VerifyOTP"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="180dp"
-        android:text="@string/verify_otp"
-        android:textColor="#00BCD4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.764"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintVertical_bias="0.86" />
 
     <Button
         android:id="@+id/sendOTP"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="125dp"
+        android:layout_marginBottom="200dp"
         android:text="@string/send_otp"
         android:textColor="#00BCD4"
-        app:layout_constraintBottom_toTopOf="@+id/VerifyOTP"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSignUp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.772"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterPhoneNumber"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "726421346455",
+    "project_id": "xpense-3c299",
+    "storage_bucket": "xpense-3c299.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726421346455:android:9722e5a607336e924671d2",
+        "android_client_info": {
+          "package_name": "com.example.xpense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726421346455-2ir3vdgmrddjs3ea9j10qc0lvdqc3ese.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXNXQnMyDIlJXRKM7yCm3u3IlrGJ-z12g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726421346455-2ir3vdgmrddjs3ea9j10qc0lvdqc3ese.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

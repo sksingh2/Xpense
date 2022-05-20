@@ -2,84 +2,152 @@ package com.example.xpense;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthOptions;
+import com.google.firebase.auth.PhoneAuthProvider;
+
+import java.util.concurrent.TimeUnit;
+
 public class Register_Page extends AppCompatActivity {
-    TextView AppName;
+   
     EditText username,phoneNumber,otpPassword;
-    Button verifyOtp,Signin,sendOtp;
-    String un,temp,validSecond,validFirst;
-    int temp_otp = 1234, otp;
-    long phoneNo;
+    Button  Sign,sendOtp;
+    FirebaseAuth mAuth;
+    String otp;
+   
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_page);
-         AppName = findViewById(R.id.signIn);
+        
          username = findViewById(R.id.EnterUsername);
          phoneNumber = findViewById(R.id.EnterPhoneNumber);
          otpPassword = findViewById(R.id.OtpPassword);
-         verifyOtp = findViewById(R.id.VerifyOTP);
-         Signin = findViewById(R.id.buttonSignUp);
+         Sign = findViewById(R.id.buttonSignUp);
          sendOtp = findViewById(R.id.sendOTP);
+         mAuth = FirebaseAuth.getInstance();
 
-         sendOtp.setOnClickListener(v -> {
-             un = username.getText().toString();
-             temp = phoneNumber.getText().toString();
-
-             if (un.length() >= 20 && temp.length() != 10) {
-                 Toast.makeText(Register_Page.this, "Username can't be more than 20 letters and Phone Number is invalid", Toast.LENGTH_SHORT).show();
-             } else if(temp.length() != 10){
-                 Toast.makeText(Register_Page.this, "Phone Number is invalid", Toast.LENGTH_SHORT).show();
-             }else if(un.length() >= 20){
-                 Toast.makeText(Register_Page.this, "Username can't be more than 20 letters", Toast.LENGTH_SHORT).show();
-             }else{
-                 validFirst = "Username and Phone Number is valid";
-                 Toast.makeText(Register_Page.this, validFirst, Toast.LENGTH_SHORT).show();
+         
+         sendOtp.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 if (TextUtils.isEmpty(phoneNumber.getText().toString()) && TextUtils.isEmpty(username.getText().toString()))
+                 {
+                     Toast.makeText(Register_Page.this, "Not a valid phone number", Toast.LENGTH_SHORT).show();
+                 }
+                 else
+                 {
+                     String number = phoneNumber.getText().toString();
+                     sendVerificationCode(number);
+                 }
              }
          });
 
-         //otp setup from phone number should be done here
-         verifyOtp.setOnClickListener(v -> {
-             phoneNo = Long.parseLong(temp);
-             if (validFirst == "Username and Phone Number is valid")
-             {
-             //temp_otp="1234";
-             otp = Integer.parseInt(otpPassword.getText().toString());
-             if (otp == temp_otp)
-             {
-                 validSecond = "OTP Verified";
-                 Toast valid_otp = Toast.makeText(this, validSecond, Toast.LENGTH_SHORT);
-                 valid_otp.show();
+         Sign.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 if (TextUtils.isEmpty(otpPassword.getText().toString()))
+                 {
+                     Toast.makeText(Register_Page.this, "OTP is incorrect", Toast.LENGTH_SHORT).show();
+                 }
+                 else{
+                     verifyCode(otpPassword.getText().toString());
+                 }
 
-             }
-             else
-             {
-                 Toast invalid_otp = Toast.makeText(getApplication(), "Invalid Otp", Toast.LENGTH_SHORT);
-                 invalid_otp.show();
-             }
              }
          });
 
-         Signin.setOnClickListener(v -> {
-             if (validSecond == "OTP Verified")
-             {
-                 //Username and phone number should be stored after clicking this button
-                 Intent redirect_home = new Intent(Register_Page.this, LogIn_Page.class );
-                 startActivity(redirect_home);
-             }
-             else
-             {
-                 Toast.makeText(this, "OTP not Verified or Wrong Otp", Toast.LENGTH_SHORT).show();
-             }
+    }
 
-         });
 
+    private void sendVerificationCode(String number)
+    {
+        PhoneAuthOptions options =
+                PhoneAuthOptions.newBuilder(mAuth)
+                        .setPhoneNumber("+91"+ number)       // Phone number to verify
+                        .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                        .setActivity(this)                 // Activity (for callback binding)
+                        .setCallbacks(mCallbacks)          // OnVerificationStateChangedCallbacks
+                        .build();
+        PhoneAuthProvider.verifyPhoneNumber(options);
+
+    }
+    private PhoneAuthProvider.OnVerificationStateChangedCallbacks
+    mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+        @Override
+        public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
+            final String code = credential.getSmsCode();
+            if(code!=null)
+            {
+                verifyCode(code);
+            }
+
+        }
+
+        @Override
+        public void onVerificationFailed(@NonNull FirebaseException e) {
+            Toast.makeText(Register_Page.this, "Verification Failed", Toast.LENGTH_SHORT).show();
+
+            // Show a message and update the UI
+        }
+
+        @Override
+        public void onCodeSent(@NonNull String s,
+                @NonNull PhoneAuthProvider.ForceResendingToken token) {
+
+            super.onCodeSent(s,token);
+            otp = s;
+            Toast.makeText(Register_Page.this, "Code Sent", Toast.LENGTH_SHORT).show();
+            Sign.setEnabled(true);
+        }
+    };
+
+    private void verifyCode(String code) {
+        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(otp,code);
+        signInByCredentials(credential);
+    }
+
+    private void signInByCredentials(PhoneAuthCredential credential) {
+
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth.signInWithCredential(credential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful())
+                {
+                    Toast.makeText(Register_Page.this, "SignIn Successful", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(Register_Page.this,bottom_navigation.class));
+                }
+            }
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user!= null)
+        {
+            startActivity(new Intent(Register_Page.this,bottom_navigation.class));
+            finish();
+        }
     }
 }
