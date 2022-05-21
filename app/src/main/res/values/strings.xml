@@ -3,6 +3,8 @@
 
     <!-- used in signin page too -->
     <string name="phone_number">Phone Number</string>
+    <string name="enter_phone_no">Enter Phone Number</string>
+    <string name="enter_otp">Enter OTP</string>
 
 
     <!--signUp page values -->
@@ -25,8 +27,6 @@
     <string name="username">Username</string>
     <string name="register">Register</string>
     <string name="enter_username">Enter Username</string>
-    <string name="enter_phone_no">Enter Phone Number</string>
-    <string name="enter_otp">Enter OTP</string>
     <string name="verify_otp">Verify OTP</string>
     <string name="send_otp">Send OTP</string>
     <string name="signup">SignUp</string>
