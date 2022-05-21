@@ -89,7 +89,6 @@
             android:textAlignment="textEnd"
             android:textSize="12sp"
             app:iconPadding="8dp"
-            app:iconTint="#CDDC39"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
