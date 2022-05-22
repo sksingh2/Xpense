@@ -154,7 +154,8 @@ public class HomeFragment extends Fragment {
                                    @Override
                                    public void onClick(View v) {
                                        FirebaseAuth.getInstance().signOut();
-                                       startActivity(new Intent(getActivity(),LogIn_Page.class));
+                                       startActivity(new Intent(getActivity(),LogIn_Page.class).
+                                               setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP));
                                        getActivity().finish();
 
                                    }

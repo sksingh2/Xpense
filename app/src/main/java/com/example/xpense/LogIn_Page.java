@@ -31,8 +31,6 @@ public class LogIn_Page extends AppCompatActivity {
     String otp;
     FirebaseAuth mAuth;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -64,7 +64,7 @@ public class Register_Page extends AppCompatActivity {
              public void onClick(View v) {
                  if (TextUtils.isEmpty(otpPassword.getText().toString()))
                  {
-                     Toast.makeText(Register_Page.this, "OTP is incorrect", Toast.LENGTH_SHORT).show();
+                     Toast.makeText(Register_Page.this, "OTP is not entered", Toast.LENGTH_SHORT).show();
                  }
                  else{
                      verifyCode(otpPassword.getText().toString());
