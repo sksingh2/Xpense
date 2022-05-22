@@ -21,13 +21,10 @@ public class Launch_screen extends AppCompatActivity {
         //start() method of the VideoView class will start the video to play
         vi.start();
         handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent i =new Intent(Launch_screen.this,LogIn_Page.class);
-                startActivity(i);
-                finish();
-            }
+        handler.postDelayed(() -> {
+            Intent i =new Intent(Launch_screen.this,LogIn_Page.class);
+            startActivity(i);
+            finish();
         },3150);
 
     }
