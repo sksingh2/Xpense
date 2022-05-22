@@ -52,6 +52,7 @@ public class LogIn_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LogIn_Page.this,Register_Page.class));
+                finish();
             }
         });
 

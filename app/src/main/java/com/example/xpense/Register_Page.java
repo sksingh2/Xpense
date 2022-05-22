@@ -134,6 +134,7 @@ public class Register_Page extends AppCompatActivity {
                 {
                     Toast.makeText(Register_Page.this, "SignIn Successful", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(Register_Page.this,bottom_navigation.class));
+                    finish();
                 }
             }
         });
