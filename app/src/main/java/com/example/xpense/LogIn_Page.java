@@ -111,6 +111,7 @@ public class LogIn_Page extends AppCompatActivity {
                 verifyCode(code);
             }
 
+            // sends sms from this method
         }
 
         @Override
