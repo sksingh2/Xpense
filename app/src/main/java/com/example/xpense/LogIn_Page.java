@@ -117,6 +117,7 @@ public class LogIn_Page extends AppCompatActivity {
         @Override
         public void onVerificationFailed(@NonNull FirebaseException e) {
             Toast.makeText(LogIn_Page.this, "Verification Failed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LogIn_Page.this, (CharSequence) e, Toast.LENGTH_SHORT).show();
 
             // Show a message and update the UI
         }
