@@ -7,9 +7,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.VideoView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class Launch_screen extends AppCompatActivity {
     VideoView vi;
     Handler handler;
+    FirebaseUser user_check ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +26,18 @@ public class Launch_screen extends AppCompatActivity {
         vi.start();
         handler = new Handler();
         handler.postDelayed(() -> {
-            Intent i =new Intent(Launch_screen.this,LogIn_Page.class);
-            startActivity(i);
-            finish();
-        },3150);
-
+            user_check = FirebaseAuth.getInstance().getCurrentUser();
+            if (user_check!= null)
+            {
+                startActivity(new Intent(Launch_screen.this,bottom_navigation.class));
+                finish();
+            }
+            else
+            {
+                Intent intent = new Intent (Launch_screen.this,LogIn_Page.class);
+                startActivity(intent);
+                finish();
+            }
+        }, 3150);
     }
 }
