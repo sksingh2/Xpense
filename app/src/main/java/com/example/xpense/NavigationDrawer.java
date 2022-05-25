@@ -30,7 +30,7 @@ public class NavigationDrawer extends AppCompatActivity {
     private TextView username,phone_number;
 
     private Uri imagePath;
-
+    // navigation drawer
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
