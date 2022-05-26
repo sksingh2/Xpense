@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.concurrent.TimeUnit;
 
@@ -31,6 +32,7 @@ public class LogIn_Page extends AppCompatActivity {
     String otp;
     FirebaseAuth mAuth;
 
+    Users users;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,8 +67,11 @@ public class LogIn_Page extends AppCompatActivity {
                 }
                 else
                 {
-                    String number = phone_no.getText().toString();
-                    sendVerificationCode(number);
+
+                        String number = phone_no.getText().toString();
+                        sendVerificationCode(number);
+
+
                 }
             }
         });

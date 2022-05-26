@@ -30,7 +30,7 @@
         android:id="@+id/buttonSignUp"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#38C98D"
         android:drawableEnd="@drawable/ic_signup_arrow"
         android:enabled="false"
@@ -73,20 +73,6 @@
         app:layout_constraintTop_toBottomOf="@+id/EnterUsername" />
 
     <TextView
-        android:id="@+id/EnterOtp"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_marginBottom="200dp"
-        android:fontFamily="@font/manjari"
-        android:text="@string/enter_otp"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/signIn"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
@@ -115,9 +101,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonSignUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EnterOtp"
-        app:layout_constraintVertical_bias="0.876" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/EnterPhoneNumber"
@@ -142,13 +126,10 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="108dp"
         android:text="@string/send_otp"
         android:textColor="#00BCD4"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSignUp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.713"
+        app:layout_constraintHorizontal_bias="0.739"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EnterPhoneNumber"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/EnterPhoneNumber" />
 </androidx.constraintlayout.widget.ConstraintLayout>

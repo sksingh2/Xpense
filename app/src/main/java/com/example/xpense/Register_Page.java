@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.concurrent.TimeUnit;
 
@@ -132,6 +133,10 @@ public class Register_Page extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful())
                 {
+                    //adding username, emailID and profile pic in the database(firebase)
+                    FirebaseDatabase.getInstance().getReference("user/"+FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            .setValue(new Users(username.getText().toString(),phoneNumber.getText().toString(),""));
+
                     Toast.makeText(Register_Page.this, "SignIn Successful", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(Register_Page.this,bottom_navigation.class));
                     finish();

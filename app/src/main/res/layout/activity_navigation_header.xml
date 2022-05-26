@@ -2,13 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#38C98D"
-    android:gravity="bottom"
-    android:padding="16dp"
     android:layout_height="185dp"
-    tools:context=".NavigationDrawer">
+    android:orientation="vertical"
+    android:background="#38C98D"
+    android:padding="16dp"
+    tools:context=".NavigationHeader">
 
     <ImageView
         android:id="@+id/profile_image"
